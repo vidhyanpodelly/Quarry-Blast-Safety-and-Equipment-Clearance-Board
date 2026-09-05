@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/Quarry-Blast-Safety-and-Equipment-Clearance-Board/',
   test: {
     environment: 'jsdom',
     globals: true,
