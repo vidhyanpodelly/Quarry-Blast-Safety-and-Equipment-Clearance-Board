@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
 import { useSafety } from '../safety/SafetyContext';
 import { RED_ZONE, isCoordinateInRedZone } from '../safety/engine';
 import type { Asset, Operator } from '../safety/types';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSafety } from '../safety/SafetyContext';
+import { isCoordinateInRedZone } from '../safety/engine';
 
 export const PrintView: React.FC = () => {
   const { state } = useSafety();
@@ -43,7 +44,7 @@ export const PrintView: React.FC = () => {
                 <td>{v.name}</td>
                 <td>{v.sector}</td>
                 <td className="font-bold">{v.status}</td>
-                <td className="font-bold text-red-600">{v.isInsideRedZone ? 'YES' : 'NO'}</td>
+                <td className="font-bold text-red-600">{isCoordinateInRedZone(v.x, v.y) ? 'YES' : 'NO'}</td>
               </tr>
             ))}
           </tbody>
@@ -69,7 +70,7 @@ export const PrintView: React.FC = () => {
                 <td>{o.name}</td>
                 <td>{o.sector}</td>
                 <td className="font-bold">{o.status}</td>
-                <td className="font-bold text-red-600">{o.isInsideRedZone ? 'YES' : 'NO'}</td>
+                <td className="font-bold text-red-600">{isCoordinateInRedZone(o.x, o.y) ? 'YES' : 'NO'}</td>
               </tr>
             ))}
           </tbody>
