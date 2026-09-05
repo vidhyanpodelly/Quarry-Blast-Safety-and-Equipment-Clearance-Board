@@ -23,7 +23,7 @@ export const Dashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 max-w-md mx-auto sm:border-x sm:border-gray-300 relative">
+    <div className="min-h-screen flex flex-col bg-gray-100 max-w-md md:max-w-2xl lg:max-w-3xl mx-auto sm:border-x sm:border-gray-300 relative">
       <header className="bg-gray-900 text-white p-4 flex justify-between items-center sticky top-0 z-10 shadow-md">
         <h1 className="text-xl font-bold uppercase tracking-wide">Quarry Safety</h1>
         <button 
